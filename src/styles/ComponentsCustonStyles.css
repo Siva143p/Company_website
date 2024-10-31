@@ -1,0 +1,113 @@
+.shadow--merge {
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 35%,
+    rgb(0, 0, 0) 55%,
+    rgb(0, 0, 0) 75%,
+    transparent
+  );
+
+  margin-top: -12.5rem;
+}
+
+.img--cover {
+  background: linear-gradient(
+    to bottom,
+    rgb(185, 18, 2, 0.5) 35%,
+    rgb(185, 18, 2, 0.3) 65%,
+    transparent
+  );
+}
+.team--profile {
+  transition: all 1s ease-in;
+  animation: slide 1s ease-in forwards;
+}
+
+.scroll-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.scroll-content {
+  display: inline-flex;
+  animation: infinite-scroll 10s linear infinite;
+}
+
+/* Spacing between each repeat */
+.scroll-content span {
+  padding-right: 2rem; /* Adjust this spacing if needed */
+  white-space: nowrap;
+}
+
+.work--img:hover .work--card-bg {
+  transition: all 0.15s ease-in;
+  transform: rotate(2deg);
+}
+
+.CTA {
+  letter-spacing: 3px;
+}
+
+.mem--icons-fb {
+  /* background-color: #b91202 !important; */
+  animation: popup 0.25s ease-in forwards;
+}
+
+.mem--icons-twitter {
+  /* background-color: #b91202 !important; */
+  animation: popup 0.5s ease-in forwards;
+}
+
+.mem--icons-linkedin {
+  /* background-color: #b91202 !important; */
+  animation: popup 0.75s ease-in forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    left: 10%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for a continuous loop */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .busi--img {
+    max-width: 80rem;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  .work--card {
+    width: 98%;
+  }
+}

@@ -1,0 +1,38 @@
+.dropdown {
+  animation: dropdown 0.25s ease-in;
+}
+
+.silde--dropdown {
+  animation: slide--dropdown 0.45s ease-in;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  50% {
+    opacity: 1;
+    top: 1rem;
+  }
+
+  100% {
+    opacity: 1;
+    top: 2rem;
+  }
+}
+
+@keyframes slide--dropdown {
+  from {
+    margin-left: -40rem;
+  }
+
+  /* 50% {
+    margin-left: -7rem;
+  } */
+
+  100% {
+    margin-left: 0rem;
+  }
+}
